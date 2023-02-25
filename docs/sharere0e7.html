@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html id="facebook" lang="en">
+<head>
+<title>फेसबुक | गलती</title>
+<meta charset="utf-8"/>
+<meta content="no-cache" http-equiv="cache-control"/>
+<meta content="no-store" http-equiv="cache-control"/>
+<meta content="max-age=0" http-equiv="cache-control"/>
+<meta content="-1" http-equiv="expires"/>
+<meta content="no-cache" http-equiv="pragma"/>
+<meta content="noindex,nofollow" name="robots"/>
+<style>
+      html, body {
+        color: #141823;
+        background-color: #e9eaed;
+        font-family: Helvetica, Lucida Grande, Arial,
+                     Tahoma, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      #header {
+        height: 30px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: center;
+      }
+
+      #icon {
+        width: 30px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      #footer {
+        border-top: 1px solid #ddd;
+        color: #9197a3;
+        font-size: 12px;
+        padding: 5px 8px 6px 0;
+      }
+    </style>
+</head>
+<body>
+<div id="header">
+<a href="//www.facebook.com/">
+<img id="icon" src="//static.facebook.com/images/logos/facebook_2x.png"/>
+</a>
+</div>
+<div id="core">
+<h1 id="sorry">क्षमा करें, कुछ गलत हो गया।</h1>
+<p id="promise">हम इस पर काम कर रहे हैं और हम इसे जल्द से जल्द ठीक कर लेंगे।</p>
+<p id="back-link">
+<a href="//www.facebook.com/" id="back">वापस जाओ</a>
+</p>
+<div id="footer">
+        Facebook
+        <span id="copyright">© 2022</span>
+<span id="help-link">
+          ·
+          <a href="//www.facebook.com/help/" id="help">केंद्र सहायता</a>
+</span>
+</div>
+</div>
+<script>
+      document.getElementById('back').onclick = function() {
+        if (history.length > 1) {
+          history.back();
+          return false;
+        }
+      };
+
+      // Adjust the display based on the window size
+      if (window.innerHeight < 80 || window.innerWidth < 80) {
+        // Blank if window is too small
+        document.body.style.display = 'none';
+      };
+      if (window.innerWidth < 200 || window.innerHeight < 150) {
+        document.getElementById('back-link').style.display = 'none';
+        document.getElementById('help-link').style.display = 'none';
+      };
+      if (window.innerWidth < 200) {
+        document.getElementById('sorry').style.fontSize = '16px';
+      };
+      if (window.innerWidth < 150) {
+        document.getElementById('promise').style.display = 'none';
+      };
+      if (window.innerHeight < 150) {
+        document.getElementById('sorry').style.margin = '4px 0 0 0';
+        document.getElementById('sorry').style.fontSize = '14px';
+        document.getElementById('promise').style.display = 'none';
+      };
+    </script>
+</body>
+</html>
